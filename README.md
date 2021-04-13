@@ -2,7 +2,7 @@
 an API working with https://www.googleapis.com/books/v1
 
 
-#Requirements: 
+# Requirements: 
 
 Na podstawie danych znajdującej się na stronie https://www.googleapis.com/books/v1/volumes?q=Hobbit zaprojektować i stworzyć aplikację w wybranym przez siebie frameworku, która będzie posiadała proste REST API:
 
