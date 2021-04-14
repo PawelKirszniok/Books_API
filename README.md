@@ -5,7 +5,7 @@
 
 * .[About](#about)
 * .[Requirements](#requirements)
-* .[Decisions and tradeoffs](#decisions and tradeoffs)
+* .[Decisions and tradeoffs](#decisions)
 * .[Demo](#demo)
 
 
