@@ -8,5 +8,5 @@ app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(UpdateData, "/db")
-api.add_resource(GetBook, "/books/<int:booK_id>")
+api.add_resource(GetBook, "/books/<string:book_id>")
 api.add_resource(GetBooks, "/books")

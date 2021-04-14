@@ -6,7 +6,7 @@ from books_api.database.models.association_tables import book_to_category
 
 class Category(Base):
 
-    __tablenamme__ = "category"
+    __tablename__ = "category"
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(200), nullable=False)
     books = relationship("Book", secondary=book_to_category, back_populates="categories")

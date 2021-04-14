@@ -6,7 +6,7 @@ from books_api.database.models.association_tables import book_to_author, book_to
 
 class Book(Base):
 
-    __tablename__ = "author"
+    __tablename__ = "book"
     id = Column(String(20), primary_key=True)
     title = Column(String(200), nullable=False)
     authors = relationship("Author", secondary=book_to_author, back_populates="books")
