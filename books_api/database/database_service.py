@@ -95,7 +95,7 @@ class DatabaseService:
             return new_category
 
     def get_author(self, author_name:str) -> Author:
-        """returns a category object that can be assigned to a book"""
+        """returns an author object that can be assigned to a book"""
         search = self.session.query(Author).filter_by(name=author_name).all()
         if search:
             return search[0]

@@ -39,14 +39,14 @@ class ExternalApiService:
             else:
                 categories = []
             authors = [database_service.get_author(author) for author in book['volumeInfo']['authors']]
-            average_rating = book['volumeInfo'].get('averageRating', -1)  # TODO Consider making this a None or "NA"
+            average_rating = book['volumeInfo'].get('averageRating', None)
             ratings_count = book['volumeInfo'].get('ratingsCount', 0)
             thumbnail =  book['volumeInfo'].get('imageLinks')
             if thumbnail:
                 thumbnail = thumbnail.get('thumbnail')
 
-            new_book = Book(book['id'], book['volumeInfo']['title'], authors, categories,book['volumeInfo']['publishedDate'],
-                            average_rating, ratings_count, thumbnail)
+            new_book = Book(book['id'], book['volumeInfo']['title'], authors, categories,
+                            book['volumeInfo']['publishedDate'], average_rating, ratings_count, thumbnail)
 
             result.append(new_book)
 

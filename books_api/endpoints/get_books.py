@@ -11,7 +11,7 @@ class GetBooks(Resource):
         """retrieves and parses the request returning all or filtered books based on args"""
 
         authors = request.args.getlist('author')
-        authors = [author[1:-1] for author in authors]  # Only here to parse quotes added to the request
+        authors = [author[1:-1] for author in authors]  # Remove quotes from the string
         year_filter = request.args.get('published_date')
         sort_by = request.args.get('sort')
         sort_by_date = 0
